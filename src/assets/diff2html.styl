@@ -1,0 +1,325 @@
+$cback = #1E1E1E
+$cdel = #643235
+$cdel2 = #250505
+$cadd = #1d2f09
+
+$c1 =  $cback // #d8d8d8
+$c2 =  $cback // #f7f7f7
+$c3 = #3C993C // #b4e2b4
+$c4 = #399839
+$c5 = #ddd
+$c6 = #722929 // #e9aeae
+$c7 = #fdf2d0
+$c9 = $cback // #ded
+$c10 =  $cback // #fff
+$c11 =  $cback // #eeeeee
+$c12 =  $cdel2 // $cback // #fee8e9
+$c13 =  $cadd // #dfd
+$c14 = $cback // #f8fafd
+$c15 = $cback // #d5e4f2
+$c16 = $cdel // #ffb6ba
+$c18 = darken($c4, 10)// #97f295
+
+.d2h-wrapper
+  text-align left
+
+.d2h-file-header
+  padding 5px 10px$c1
+  border-bottom 1px solid
+  background-color $c2
+
+.d2h-file-stats
+  display -webkit-box
+  display -ms-flexbox
+  display flex
+  margin-left auto
+  font-size 14px
+
+.d2h-lines-added
+  text-align right
+  border 1px solid $c3
+  border-radius 5px 0 0 5px
+  color $c4
+  padding 2px
+  vertical-align middle
+
+.d2h-lines-deleted
+  text-align left
+  border 1px solid $c6
+  border-radius 0 5px 5px 0
+  color #c33
+  padding 2px
+  vertical-align middle
+  margin-left 1px
+
+.d2h-file-name-wrapper
+  display -webkit-box
+  display -ms-flexbox
+  display flex
+  -webkit-box-align center
+  -ms-flex-align center
+  align-items center
+  width 100%
+  font-family "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif
+  font-size 15px
+
+.d2h-file-name
+  white-space nowrap
+  text-overflow ellipsis
+  overflow-x hidden
+  line-height 21px
+
+.d2h-file-wrapper
+  border 1px solid $c5
+  border-radius 3px
+  margin-bottom 1em
+
+.d2h-diff-table
+  width 100%
+  border-collapse collapse
+  font-family "Menlo", "Consolas", monospace
+  font-size 13px
+
+.d2h-diff-tbody
+  & > tr
+    & > td
+      height 20px
+      line-height 20px
+
+.d2h-files-diff
+  display block
+  width 100%
+  height 100%
+
+.d2h-file-diff
+  overflow-x scroll
+  overflow-y hidden
+  .d2h-del
+    &.d2h-change
+      background-color $c7
+  .d2h-ins
+    &.d2h-change
+      background-color $c9
+
+.d2h-file-side-diff
+  display inline-block
+  overflow-x scroll
+  overflow-y hidden
+  width 50%
+  margin-right -4px
+  margin-bottom -8px
+
+.d2h-code-line
+  display inline-block
+  white-space nowrap
+  padding 0 10px
+  margin-left 80px
+
+.d2h-code-side-line
+  display inline-block
+  white-space nowrap
+  padding 0 10px
+  margin-left 50px
+
+.d2h-code-line del,
+.d2h-code-side-line del
+  display inline-block
+  margin-top -1px
+  text-decoration none
+  background-color $c16
+  border-radius 0.2em
+
+.d2h-code-line ins,
+.d2h-code-side-line ins
+  display inline-block
+  margin-top -1px
+  text-decoration none
+  background-color $c18
+  border-radius 0.2em
+  text-align left
+
+.d2h-code-line-prefix
+  display inline
+  background none
+  padding 0
+  word-wrap normal
+  white-space pre
+
+.d2h-code-line-ctn
+  display inline
+  background none
+  padding 0
+  word-wrap normal
+  white-space pre
+
+.line-num1
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  float left
+  width 40px
+  overflow hidden
+  text-overflow ellipsis
+  padding-left 3px
+
+.line-num2
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  float right
+  width 40px
+  overflow hidden
+  text-overflow ellipsis
+  padding-left 3px
+
+.d2h-code-linenumber
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  position absolute
+  width 86px
+  padding-left 2px
+  padding-right 2px
+  background-color $c10
+  color rgba(white, .3)
+  text-align right
+  border solid $c11
+  border-width 0 1px 0 1px
+  cursor pointer
+
+.d2h-code-side-linenumber
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  position absolute
+  width 56px
+  padding-left 5px
+  padding-right 5px
+  background-color $c10
+  color rgba(white, 0.3)
+  text-align right
+  border solid $c11
+  border-width 0 1px 0 1px
+  cursor pointer
+  overflow hidden
+  text-overflow ellipsis
+
+.d2h-del
+  background-color $c12
+  border-color $c6
+
+.d2h-ins
+  background-color $c13
+  border-color $c3
+
+.d2h-info
+  background-color $c14
+  color rgba(0, 0, 0, 0.3)
+  border-color $c15
+
+.d2h-file-list-wrapper
+  margin-bottom 10px
+  a
+    text-decoration none
+    color #3572b0
+    &:visited
+      color #3572b0
+
+.d2h-file-list-header
+  text-align left
+
+.d2h-file-list-title
+  font-weight bold
+
+.d2h-file-list-line
+  display -webkit-box
+  display -ms-flexbox
+  display flex
+  text-align left
+
+.d2h-file-list
+  display block
+  list-style none
+  padding 0
+  margin 0
+  & > li
+    border-bottom $c5 solid 1px
+    padding 5px 10px
+    margin 0
+    &:last-child
+      border-bottom none
+
+.d2h-file-switch
+  display none
+  font-size 10px
+  cursor pointer
+
+.d2h-icon-wrapper
+  line-height 31px
+
+.d2h-icon
+  vertical-align middle
+  margin-right 10px
+  fill currentColor
+
+.d2h-deleted
+  color #c33
+
+.d2h-added
+  color $c4
+
+.d2h-changed
+  color #d0b44c
+
+.d2h-moved
+  color #3572b0
+
+.d2h-tag
+  display -webkit-box
+  display -ms-flexbox
+  display flex
+  font-size 10px
+  margin-left 5px
+  padding 0 2px
+  background-color $c10
+
+.d2h-deleted-tag
+  border #c33 1px solid
+
+.d2h-added-tag
+  border $c4 1px solid
+
+.d2h-changed-tag
+  border #d0b44c 1px solid
+
+.d2h-moved-tag
+  border #3572b0 1px solid
+
+.selecting-left .d2h-code-line,
+.selecting-left .d2h-code-line *,
+.selecting-right td.d2h-code-linenumber,
+.selecting-right td.d2h-code-linenumber *,
+.selecting-left .d2h-code-side-line,
+.selecting-left .d2h-code-side-line *,
+.selecting-right td.d2h-code-side-linenumber,
+.selecting-right td.d2h-code-side-linenumber *
+  -webkit-touch-callout none
+  -webkit-user-select none
+  -moz-user-select none
+  -ms-user-select none
+  user-select none
+
+.selecting-left .d2h-code-line::-moz-selection,
+.selecting-left .d2h-code-line *::-moz-selection,
+.selecting-right td.d2h-code-linenumber::-moz-selection,
+.selecting-left .d2h-code-side-line::-moz-selection,
+.selecting-left .d2h-code-side-line *::-moz-selection,
+.selecting-right td.d2h-code-side-linenumber::-moz-selection,
+.selecting-right td.d2h-code-side-linenumber *::-moz-selection
+  background transparent
+
+.selecting-left .d2h-code-line::selection,
+.selecting-left .d2h-code-line *::selection,
+.selecting-right td.d2h-code-linenumber::selection,
+.selecting-left .d2h-code-side-line::selection,
+.selecting-left .d2h-code-side-line *::selection,
+.selecting-right td.d2h-code-side-linenumber::selection,
+.selecting-right td.d2h-code-side-linenumber *::selection
+  background transparent
+
