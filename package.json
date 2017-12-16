@@ -1,14 +1,13 @@
 {
-  "name": "app2",
+  "name": "prettier-diff",
   "version": "1.0.0",
-  "description": "A Vue.js project",
-  "author": "Jono Lee <jono-lee@hotmail.co.uk>",
+  "description": "Prettier Diff",
+  "author": "Jonathan T L Lee <jono-lee@hotmail.co.uk>",
   "private": true,
   "scripts": {
     "dev": "node build/dev-server.js",
-    "start": "node build/dev-server.js",
-    "build": "node build/build.js && cp app.js dist/app.js",
-    "deploy": "rsync -azP ./ --exclude='node_modules' root@blogjono.com:/root/projects/dynamic/pretty"
+    "start": "node app.js",
+    "build": "node build/build.js"
   },
   "dependencies": {
     "babel-plugin-dynamic-import-webpack": "^1.0.2",
@@ -35,7 +34,7 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
-    "chalk": "^2.1.0",
+    "chalk": "^2.3.0",
     "chromedriver": "^2.33.1",
     "coffeescript": "^2.0.3",
     "coffeescript-loader": "^0.0.11",

@@ -9,13 +9,7 @@ const uglifyjs = require('uglify-js')
 app.use(bodyParser.json())
 app.use(cors())
 
-app.use('/static', express.static(path.resolve(__dirname, '/static')))
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '/index.html'))
-})
-app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '/service-worker.js'))
-})
+app.use('/', express.static(path.join(__dirname, '/dist')))
 
 app.post('/transform-code', (req, res) => {
   let {code, options, name} = req.body

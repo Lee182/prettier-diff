@@ -41,7 +41,7 @@ import * as diff from 'diff'
 import {Diff2Html} from 'diff2html'
 
 
-apiUrl = 'http://localhost:9700'
+apiUrl = ""
 
 copyToClipboard = (text) ->
   if window.clipboardData and window.clipboardData.setData
@@ -93,6 +93,7 @@ export default
     onCodeChange: (editor, i) ->
       @$set(@code, i, editor.getValue())
     prettifyCode: () ->
+      console.log 'prettifyCode', apiUrl
       try
         response = await fetch "#{apiUrl}/transform-code",
           method: 'post'
