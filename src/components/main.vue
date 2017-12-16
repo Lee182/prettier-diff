@@ -94,7 +94,7 @@ export default
       @$set(@code, i, editor.getValue())
     prettifyCode: () ->
       try
-        response = await fetch "#{apiUrl}/transform-code", 
+        response = await fetch "#{apiUrl}/transform-code",
           method: 'post'
           headers:
             'Content-Type': 'application/json'
@@ -108,7 +108,7 @@ export default
         console.error(err)
       # @$set(@code, i, prettycode)
     uglifyCode: ->
-      response = await fetch "#{apiUrl}/transform-code", 
+      response = await fetch "#{apiUrl}/transform-code",
         method: 'post'
         headers:
           'Content-Type': 'application/json'
@@ -130,7 +130,7 @@ export default
     closeDiff: ->
       @diffhtml = ''
 
-      
+
 
 
   components: {MonacoEditor, svgArrow, svgCopy, svgClose, svgUgly}
@@ -161,6 +161,27 @@ export default
   user-select none
 .d2h-file-side-diff
   position relative
+.d2h-code-side-line
+  margin-left 25.5px
+.d2h-diff-table
+  font-family Menlo, Monaco, "Courier New", monospace
+  font-weight 400
+  font-size 12px
+  line-height 18px !important
+  color #d4d4d4
+.d2h-diff-tbody
+  & > tr
+    & > td
+      height 18px
+      line-height 18px
+.d2h-code-side-linenumber
+  width 41px
+.decorationsOverviewRuler
+  opacity 0
+
+
+
+
 $cback = #1E1E1E
 
 .diffhtml-modal
