@@ -12,8 +12,10 @@ dependencies:
   prettier: 1.9.2
   uglify-js: 3.2.2
   vue: 2.5.11
+  vue-material: 0.8.1
   vue-monaco-editor: github.com/Lee182/vue-monaco-editor/ee8fdf755073befe3cb8b6bda14354829c2a9358
   vue-router: 3.0.1
+  vuetify: 0.17.5
 devDependencies:
   autoprefixer: 7.2.3
   babel-core: 6.26.0
@@ -6467,6 +6469,12 @@ packages:
       vue-template-compiler: ^2.0.0
     resolution:
       integrity: sha512-TLxhYSquo0NLZJT6mQ3m016wyjkQj28ToPAUYL29KCE8sV4uCL+iFjkbxSefCQAq4+KMe+dFycYNVQ/yHJWWuw==
+  /vue-material/0.8.1:
+    dependencies:
+      vue: 2.5.11
+    dev: false
+    resolution:
+      integrity: sha512-r7mi6g+VuM/eUvIal4kHRqEzcnK9FIB37QX+9T6ZER66dWOPn+BPs5J1F3k50/QtSovs/qU/dRg1ZhenHU7ISQ==
   /vue-router/3.0.1:
     dev: false
     resolution:
@@ -6502,6 +6510,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-FZzUIvJa1jsFSfy6OITgjzoCtnxI8uHkewa2QCCCIgRj7ObsalXKLTf3S5sBP+kyusTctl3fKej+NHoBUCVPlA==
+  /vuetify/0.17.5:
+    dev: false
+    engines:
+      node: '>= 4.0.0'
+      npm: '>= 3.0.0'
+    peerDependencies:
+      vue: ^2.5.0
+    resolution:
+      integrity: sha512-ESBiI/8kvmOyjND52DFMZu5nsdJu+r8fTh2qtweH6U014en7O9tqqyKhLUPE8/7uqrT5Z9wtc90BfO0qBinrkg==
   /ware/1.3.0:
     dependencies:
       wrap-fn: 0.1.5
@@ -6801,7 +6818,7 @@ packages:
       tarball: 'https://codeload.github.com/Lee182/vue-monaco-editor/tar.gz/ee8fdf755073befe3cb8b6bda14354829c2a9358'
     version: 0.0.20
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 4
+shrinkwrapMinorVersion: 2
 shrinkwrapVersion: 3
 specifiers:
   autoprefixer: ^7.2.2
@@ -6857,11 +6874,13 @@ specifiers:
   vue-cli: ^2.9.2
   vue-hot-reload-api: ^2.2.4
   vue-loader: ^13.3.0
+  vue-material: ^0.8.1
   vue-monaco-editor: 'github:Lee182/vue-monaco-editor'
   vue-router: ^3.0.1
   vue-style-loader: ^3.0.3
   vue-svg-loader: ^0.4.0
   vue-template-compiler: ^2.5.2
+  vuetify: ^0.17.5
   webpack: ^3.7.1
   webpack-bundle-analyzer: ^2.9.0
   webpack-dev-middleware: ^1.12.0

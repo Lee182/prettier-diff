@@ -13,17 +13,22 @@ div
       @mounted="onMounted($event, i-1)"
       @codeChange="onCodeChange($event, i-1)")
   .globalbtns
+    portal(to="header-select")
+      v-select(
+        :items='header.select_items'
+        v-model="header.selected"
+        label="Select"
+        single-line
+        bottom)
     portal(to="action-primary")
-      .group-btn-wrap(@click='generateDiff' v-show='!diffopen'): .group-btn
-        span diff
-      .group-btn-wrap(@click='closeDiff' v-show='diffopen'): .group-btn
-        span edit
+      v-btn(flat, @click='generateDiff', v-show='!diffopen') diff
+      v-btn(flat, @click='closeDiff', v-show='diffopen') edit
     portal(to="action-pretty")
-      .group-btn-wrap(@click='prettifyCode()'): .group-btn
-        img(src='../assets/pretty.png')
+      v-btn(@click='prettifyCode()' icon)
+        img.icon-square(src='/static/img/icons/pretty.png')
     portal(to="action-ugly")
-      .group-btn-wrap(@click='uglifyCode()'): .group-btn
-        img(src='../assets/ugly.png')
+      v-btn(@click='uglifyCode()' icon)
+        img.icon-square(src='/static/img/icons/ugly.png')
 
 </template>
 
@@ -72,6 +77,19 @@ reqprettier = (code) ->
 
 export default
   data: ->
+    header:
+      selected: null
+      select_items: [
+        {
+          text: 'diff'
+        }
+        {
+          text: 'html -> pug'
+        },
+        {
+          text: 'css -> stylus'
+        }
+      ]
     editorOptions:
       glyphMargin: false
     diffhtml: ''
@@ -252,4 +270,7 @@ $cback = #1E1E1E
   &:active
     transform scale(.95)
 
+.icon-square
+  height 2rem
+  width 2rem
 </style>

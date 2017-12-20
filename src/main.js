@@ -5,6 +5,26 @@ import App from './App'
 import router from './router'
 
 import PortalVue from 'portal-vue'
+import {
+ Vuetify,
+ VApp,
+ VNavigationDrawer,
+ VFooter,
+ VList,
+ VBtn,
+ VSelect
+} from 'vuetify/es5/components'
+
+Vue.use(Vuetify, {
+  components: {
+    VApp,
+    VNavigationDrawer,
+    VFooter,
+    VList,
+    VBtn,
+    VSelect
+  }
+})
 
 Vue.use(PortalVue)
 Vue.config.productionTip = false

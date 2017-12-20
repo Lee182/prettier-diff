@@ -23,8 +23,10 @@
     "prettier": "^1.9.1",
     "uglify-js": "^3.2.1",
     "vue": "^2.5.2",
+    "vue-material": "^0.8.1",
     "vue-monaco-editor": "github:Lee182/vue-monaco-editor",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuetify": "^0.17.5"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.2",

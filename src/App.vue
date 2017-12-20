@@ -2,7 +2,7 @@
 
 #app
   header
-    h1 Prettier diff
+    portal-target(name="header-select")
     .flex-gap
     portal-target(name="action-primary")
     portal-target(name="action-pretty")
@@ -20,6 +20,7 @@ export default {
 
 <style lang="stylus">
 @require './assets/jonoreset.styl'
+@import '../node_modules/vuetify/src/stylus/main.styl'
 .flex-gap
   flex-grow 1
 body
