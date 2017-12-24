@@ -15,14 +15,15 @@ div
   .globalbtns
     portal(to="header-select")
       v-select(
-        :items='header.select_items'
-        v-model="header.selected"
-        label="Select"
-        single-line
-        bottom)
+        :label="header_select.label"
+        :min-width="header_select['min-width']"
+        :single-line="header_select['single-line']"
+        :bottom="header_select.bottom"
+        v-model="header_select['v-model']"
+        :items="header_select.items"
+        dark="true")
     portal(to="action-primary")
-      v-btn(flat, @click='generateDiff', v-show='!diffopen') diff
-      v-btn(flat, @click='closeDiff', v-show='diffopen') edit
+      v-btn(flat, @click='diffBtnClick') {{ diffopen ? 'edit' : 'diff' }}
     portal(to="action-pretty")
       v-btn(@click='prettifyCode()' icon)
         img.icon-square(src='/static/img/icons/pretty.png')
@@ -76,17 +77,26 @@ reqprettier = (code) ->
   return '// abcd \n' + code
 
 export default
+
   data: ->
-    header:
-      selected: null
-      select_items: [
+    primaryItem =
+      id: 'diff'
+      text: 'diff'
+    header_select:
+      'color': '#35495e'
+      'label': "Select method"
+      'min-width': '400px'
+      'single-line': true
+      'bottom': true
+      'v-model': primaryItem
+      'items': [
+        primaryItem,
         {
-          text: 'diff'
-        }
-        {
+          id: 'html'
           text: 'html -> pug'
         },
         {
+          id: 'css'
           text: 'css -> stylus'
         }
       ]
@@ -148,7 +158,11 @@ export default
         matching: 'lines'
     closeDiff: ->
       @diffhtml = ''
-
+    diffBtnClick: ->
+      if !@diffopen
+        @generateDiff()
+      else
+        @closeDiff()
 
 
 

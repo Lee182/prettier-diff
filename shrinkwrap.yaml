@@ -6869,7 +6869,7 @@ packages:
       tarball: 'https://codeload.github.com/Lee182/vue-monaco-editor/tar.gz/ee8fdf755073befe3cb8b6bda14354829c2a9358'
     version: 0.0.20
 registry: 'https://registry.npmjs.org/'
-shrinkwrapMinorVersion: 2
+shrinkwrapMinorVersion: 4
 shrinkwrapVersion: 3
 specifiers:
   autoprefixer: ^7.2.2

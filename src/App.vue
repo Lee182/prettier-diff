@@ -1,9 +1,12 @@
 <template lang="pug">
 
 #app
-  header
+  v-toolbar(
+    color="pink darken-4"
+    dark
+    dense)
     portal-target(name="header-select")
-    .flex-gap
+    v-spacer
     portal-target(name="action-primary")
     portal-target(name="action-pretty")
     portal-target(name="action-ugly")
@@ -54,8 +57,14 @@ header
     padding-top 16px
 
 main
-  height calc(100vh - 56px)
+  height calc(100vh - 48px)
   overflow-y scroll
   background #1E1E1E
+
+v-spacer
+  flex-grow 1
+
+.input-group
+  height 32px
 
 </style>

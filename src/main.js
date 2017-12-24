@@ -12,7 +12,8 @@ import {
  VFooter,
  VList,
  VBtn,
- VSelect
+ VSelect,
+ VToolbar
 } from 'vuetify/es5/components'
 
 Vue.use(Vuetify, {
@@ -22,7 +23,8 @@ Vue.use(Vuetify, {
     VFooter,
     VList,
     VBtn,
-    VSelect
+    VSelect,
+    VToolbar
   }
 })
 
