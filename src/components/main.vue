@@ -21,7 +21,7 @@ div
         :bottom="header_select.bottom"
         v-model="header_select['v-model']"
         :items="header_select.items"
-        dark="true")
+        dark=true)
     portal(to="action-primary")
       v-btn(flat, @click='diffBtnClick') {{ diffopen ? 'edit' : 'diff' }}
     portal(to="action-pretty")
@@ -93,11 +93,13 @@ export default
         primaryItem,
         {
           id: 'html'
-          text: 'html -> pug'
+          text: 'html -> pug',
+          disabled: true
         },
         {
           id: 'css'
-          text: 'css -> stylus'
+          text: 'css -> stylus',
+          disabled: true
         }
       ]
     editorOptions:
