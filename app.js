@@ -1,11 +1,12 @@
 const express = require('express')
 const app = express()
+const util = require('util')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const path = require('path')
 const prettier = require('prettier')
 const uglifyjs = require('uglify-js')
-const html2pug = require('html2pug')
+const html2jade = require('html2jade')
 
 app.use(bodyParser.json())
 app.use(cors())
@@ -31,9 +32,10 @@ app.post('/transform-code', (req, res) => {
   res.json({ code, options, date: new Date() })
 })
 
-app.post('/html2pug', (req, res) => {
+app.post('/html2pug', async (req, res) => {
   const { code } = req.body
-  const sPug = html2pug(code)
+  const convertHtml = util.promisify(html2jade.convertHtml)
+  const sPug = await convertHtml(code, { bodyless: true, tabs: false })
   res.json({ sPug })
 })
 

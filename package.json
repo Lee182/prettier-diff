@@ -18,7 +18,7 @@
     "cors": "^2.8.4",
     "diff": "^3.4.0",
     "diff2html": "^2.3.2",
-    "html2pug": "^2.0.1",
+    "html2jade": "^0.8.6",
     "lodash": "^4.17.4",
     "portal-vue": "^1.1.1",
     "prettier": "^1.9.1",
