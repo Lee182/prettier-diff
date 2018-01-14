@@ -2,7 +2,7 @@
 
 #app
   v-toolbar(
-    color="pink darken-4"
+    color="jblue darken-4"
     dark
     dense)
     portal-target(name="header-select")
@@ -35,6 +35,10 @@ body
   -moz-osx-font-smoothing grayscale
   color #fff
   background #1E1E1E
+
+.jblue
+  background-color #35495e
+  border-color #35495e
 
 header
   max-width 100vw
